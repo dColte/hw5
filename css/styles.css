@@ -121,6 +121,7 @@ position: relative;
     position: absolute;
     left: 0;
     bottom: -36px;
+    position: relative;
 }
 
 .header-link:hover::after {
@@ -595,6 +596,60 @@ max-width: 116px;
     fill: #FFFFFF
 }
 
+
+/* ---------!MODAL!-------- */
+
+.bacdrop {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: opacity 250ms linear, visibility 250ms linear; 
+}
+
+.modal {
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1);
+    transition: transform 250ms linear;
+}
+
+.bacdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scaleY(0);
+}
+
+.bnt-modal {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.modal-close-icon {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+}
+
+
+.is-hidden {
+    opacity: 0;
+    visibility:hidden;
+    pointer-events: none;
+}
 /* ---------!PORTFOLIO!-------- */
 
 .portfolio {
