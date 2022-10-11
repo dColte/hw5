@@ -93,6 +93,7 @@ letter-spacing: 0.02em;
 color: var(--main-text);
 display: block;
 position: relative;
+transition: color 250ms linear
 }
 
 .header-link:after {
@@ -102,7 +103,6 @@ position: relative;
     border-radius: 2px;
     display: block;
     width: 100%;
-    height: 4px;
     position: absolute;
     left: 0;
     bottom: -36px;
@@ -110,18 +110,18 @@ position: relative;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current::after {
+.header-link.current::after {
     content: "";
     background-color: var(--accent-color);
     height: 4px;
     border-radius: 2px;
     display: block;
     width: 100%;
-    height: 4px;
     position: absolute;
     left: 0;
     bottom: -36px;
-    position: relative;
+    background: var(--accent-color);
+    opacity: 1;
 }
 
 .header-link:hover::after {
@@ -374,6 +374,7 @@ padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms linear
 }
 
 .team-soc-link:hover, 
@@ -445,6 +446,7 @@ border-radius: 4px;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: border 250ms linear, fill 250ms linear;
 }
 
 .clients-icon {
@@ -578,7 +580,7 @@ max-width: 116px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: background-color 250ms linear
 }
 
 .footer-soc-link:hover, 
@@ -683,7 +685,7 @@ background: #F5F4FA;
 border-radius: 4px;
 padding: 6px 22px;
 border: 0;
-transition: color 250ms linear, background-color 250ms linear;
+transition: color 250ms linear, background-color 250ms linear, box-shadow 250ms linear;
 }
 
 .portfolio-btn:hover,
@@ -717,7 +719,7 @@ line-height: 1.56;
 letter-spacing: 0.03em;
 color: #FFFFFF;
 padding: 63px 24px;
-transform: translateY(110%);
+transform: translateY(100%);
 transition: transform 250ms linear;
 }
 
@@ -727,6 +729,7 @@ transition: transform 250ms linear;
 
 .portfolio-item {
     background: #FFFFFF;
+    transition: box-shadow 250ms linear;
 /* border: 1px solid #EEEEEE;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),   
 0px 4px 4px rgba(0, 0, 0, 0.06), 
