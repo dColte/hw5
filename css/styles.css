@@ -450,7 +450,8 @@ transition: border 250ms linear, fill 250ms linear;
 }
 
 .clients-icon {
-    fill: #AFB1B8
+    fill: #AFB1B8;
+    transition: fill 250ms linear;
 }
 
 .clients-icon-link:hover, 
